@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('train_code')->unique();
             $table->integer('carriage_number');
             $table->boolean('on_time')->default(true);
-            $table->boolean('cancelled')->default(false);
+            $table->boolean('deleted')->default(false);
 
 
             $table->timestamps();
