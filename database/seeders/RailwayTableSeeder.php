@@ -4,18 +4,17 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Railway;
 
-class DatabaseSeeder extends Seeder
+class RailwayTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call([
-            RailwayTableSeeder::class
-        ]);
+        Railway::factory()->count(100)->create();
     }
 }
